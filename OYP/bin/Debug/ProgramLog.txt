@@ -1,0 +1,755 @@
+2024-11-27 11:30:50 - Program başlatıldı.
+2024-11-27 11:30:51 - Backup_1 ve Backup_2 kayıtları sıfırlanırken hata oldu: Invalid object name 'customers'.
+2024-11-27 11:30:53 - Lisans süresi uyarısı e-posta olarak gönderildi: Lisans süresi bitmiştir.
+2024-11-27 11:32:03 - Program başlatıldı.
+2024-11-27 11:32:05 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 11:32:06 - Lisans süresi uyarısı e-posta olarak gönderildi: Lisans süresi bitmiştir.
+2024-11-27 12:00:00 - Yedekleme işlemi başlatıldı.
+2024-11-27 12:26:32 - Program başlatıldı.
+2024-11-27 12:26:33 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 12:26:35 - Lisans süresi uyarısı e-posta olarak gönderildi: Lisans süresi bitmiştir.
+2024-11-27 12:27:28 - Yedekleme işlemi başlatıldı.
+2024-11-27 12:27:33 - Yedekleme işlemi tamamlandı.
+2024-11-27 12:32:50 - Program başlatıldı.
+2024-11-27 12:32:51 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 12:32:52 - Lisans süresi uyarısı e-posta olarak gönderildi: Lisans süresi bitmiştir.
+2024-11-27 12:33:00 - Yedekleme işlemi başlatıldı.
+2024-11-27 12:39:13 - Program başlatıldı.
+2024-11-27 12:39:14 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 12:39:16 - Lisans süresi uyarısı e-posta olarak gönderildi: Lisans süresi bitmiştir.
+2024-11-27 12:43:52 - Program başlatıldı.
+2024-11-27 12:46:13 - Program başlatıldı.
+2024-11-27 12:47:46 - Program başlatıldı.
+2024-11-27 12:48:20 - Program başlatıldı.
+2024-11-27 12:49:10 - Program başlatıldı.
+2024-11-27 12:49:32 - Program başlatıldı.
+2024-11-27 12:49:33 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 12:49:35 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 12:59:32 - Program başlatıldı.
+2024-11-27 12:59:34 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 12:59:37 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 13:00:07 - Program başlatıldı.
+2024-11-27 13:00:09 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 13:00:12 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 13:00:40 - Program başlatıldı.
+2024-11-27 13:00:42 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 13:00:57 - Program başlatıldı.
+2024-11-27 13:00:59 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 13:01:01 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 13:01:29 - Program başlatıldı.
+2024-11-27 13:01:31 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 13:01:34 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 14:04:55 - Program başlatıldı.
+2024-11-27 14:04:56 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 14:04:58 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 15:17:26 - Program başlatıldı.
+2024-11-27 15:17:27 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 15:17:29 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 15:17:31 - Yedekleme işlemi başlatıldı.
+2024-11-27 15:17:41 - Program başlatıldı.
+2024-11-27 15:17:43 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 15:17:44 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 15:18:00 - Yedekleme işlemi başlatıldı.
+2024-11-27 15:18:04 - Yedekleme işlemi tamamlandı.
+2024-11-27 15:19:48 - Program başlatıldı.
+2024-11-27 15:19:49 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 15:19:51 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 15:20:08 - Yedekleme işlemi başlatıldı.
+2024-11-27 15:22:08 - Program başlatıldı.
+2024-11-27 15:22:09 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 15:22:12 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 15:22:14 - Yedekleme işlemi başlatıldı.
+2024-11-27 15:26:24 - Program başlatıldı.
+2024-11-27 15:26:26 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 15:26:27 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 15:26:31 - Yedekleme işlemi başlatıldı.
+2024-11-27 15:29:22 - Program başlatıldı.
+2024-11-27 15:29:23 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 15:29:25 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 15:29:26 - Yedekleme işlemi başlatıldı.
+2024-11-27 15:34:12 - Program başlatıldı.
+2024-11-27 15:34:13 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 15:34:15 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-27 15:34:16 - Yedekleme işlemi başlatıldı.
+2024-11-27 15:35:31 - Program başlatıldı.
+2024-11-27 15:35:33 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-27 15:35:34 - Yedekleme işlemi başlatıldı.
+2024-11-27 15:35:34 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 2 gün kalmıştır.
+2024-11-28 11:03:05 - Program başlatıldı.
+2024-11-28 11:03:53 - Program başlatıldı.
+2024-11-28 11:15:32 - Program başlatıldı.
+2024-11-28 11:15:50 - Program başlatıldı.
+2024-11-28 11:16:22 - Program başlatıldı.
+2024-11-28 11:19:50 - Program başlatıldı.
+2024-11-28 11:20:20 - Program başlatıldı.
+2024-11-28 11:21:08 - Bağlantı Hatası:Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: Named Pipes Provider, error: 40 - SQL Server için bağlantı açılamadı)
+2024-11-28 11:21:39 - Program başlatıldı.
+2024-11-28 11:21:40 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:21:42 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:25:27 - Program başlatıldı.
+2024-11-28 11:25:28 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:25:30 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:28:43 - Program başlatıldı.
+2024-11-28 11:28:44 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:28:45 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:29:06 - Program başlatıldı.
+2024-11-28 11:29:08 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:29:09 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:29:30 - Program başlatıldı.
+2024-11-28 11:29:31 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:29:32 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:33:13 - Program başlatıldı.
+2024-11-28 11:36:23 - Program başlatıldı.
+2024-11-28 11:36:33 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:36:36 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:38:46 - Program başlatıldı.
+2024-11-28 11:38:47 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:38:48 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:39:29 - Program başlatıldı.
+2024-11-28 11:39:30 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:39:32 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:42:03 - Program başlatıldı.
+2024-11-28 11:42:05 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:42:06 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:42:22 - Program başlatıldı.
+2024-11-28 11:42:23 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:42:25 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:45:14 - Program başlatıldı.
+2024-11-28 11:45:15 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:45:16 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:45:48 - Program başlatıldı.
+2024-11-28 11:45:49 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:45:51 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:49:21 - Program başlatıldı.
+2024-11-28 11:49:22 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:49:24 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:50:29 - Program başlatıldı.
+2024-11-28 11:50:30 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:50:32 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 11:50:46 - Program başlatıldı.
+2024-11-28 11:50:47 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 11:50:49 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:16:37 - Program başlatıldı.
+2024-11-28 12:16:39 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:16:41 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:18:22 - Program başlatıldı.
+2024-11-28 12:18:23 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:18:24 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:20:05 - Program başlatıldı.
+2024-11-28 12:20:06 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:20:07 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:21:53 - Program başlatıldı.
+2024-11-28 12:21:54 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:21:54 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:21:54 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:21:54 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:21:54 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:21:54 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:21:54 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:21:55 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:23:56 - Program başlatıldı.
+2024-11-28 12:23:57 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:23:57 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:23:57 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:23:57 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:23:57 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:23:57 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:23:57 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:23:58 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:26:45 - Program başlatıldı.
+2024-11-28 12:26:46 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:26:47 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:26:47 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:26:47 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:26:47 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:26:47 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:26:47 - Tarih formatı hatalı: -rw-rw-rw- 1 ftp
+2024-11-28 12:26:48 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:27:26 - Program başlatıldı.
+2024-11-28 12:27:27 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:27:29 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:28:28 - Program başlatıldı.
+2024-11-28 12:28:29 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:28:31 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:29:23 - Program başlatıldı.
+2024-11-28 12:29:24 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:29:25 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:31:34 - Program başlatıldı.
+2024-11-28 12:31:34 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:31:36 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:33:08 - Program başlatıldı.
+2024-11-28 12:33:09 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:33:11 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:39:10 - Program başlatıldı.
+2024-11-28 12:39:11 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:39:12 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:44:59 - Program başlatıldı.
+2024-11-28 12:45:00 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:45:01 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:48:50 - Program başlatıldı.
+2024-11-28 12:48:51 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:49:55 - Program başlatıldı.
+2024-11-28 12:49:56 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:49:57 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:53:46 - Program başlatıldı.
+2024-11-28 12:53:47 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 12:53:48 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 12:58:38 - Program başlatıldı.
+2024-11-28 12:59:07 - Program başlatıldı.
+2024-11-28 13:00:45 - Program başlatıldı.
+2024-11-28 13:00:46 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:00:47 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:01:33 - Program başlatıldı.
+2024-11-28 13:01:33 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:01:35 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:02:15 - Program başlatıldı.
+2024-11-28 13:02:15 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:02:17 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:02:37 - Program başlatıldı.
+2024-11-28 13:02:38 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:02:40 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:03:23 - Program başlatıldı.
+2024-11-28 13:03:24 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:03:25 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:05:17 - Program başlatıldı.
+2024-11-28 13:05:18 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:05:19 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:07:15 - Program başlatıldı.
+2024-11-28 13:07:16 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:07:17 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:08:15 - Program başlatıldı.
+2024-11-28 13:08:16 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:08:17 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:09:10 - Program başlatıldı.
+2024-11-28 13:09:11 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:09:13 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:09:29 - Program başlatıldı.
+2024-11-28 13:09:30 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:09:31 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:10:40 - Program başlatıldı.
+2024-11-28 13:10:41 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:10:42 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:11:30 - Program başlatıldı.
+2024-11-28 13:11:31 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:11:32 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:12:10 - Program başlatıldı.
+2024-11-28 13:12:50 - Program başlatıldı.
+2024-11-28 13:13:23 - Program başlatıldı.
+2024-11-28 13:19:17 - Program başlatıldı.
+2024-11-28 13:19:18 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:19:20 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:19:48 - Program başlatıldı.
+2024-11-28 13:19:49 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:19:50 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:20:06 - Program başlatıldı.
+2024-11-28 13:20:07 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:20:08 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:20:47 - Program başlatıldı.
+2024-11-28 13:20:48 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:20:50 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:21:06 - Program başlatıldı.
+2024-11-28 13:21:07 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:21:08 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:21:55 - Program başlatıldı.
+2024-11-28 13:21:56 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:21:58 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:23:22 - Program başlatıldı.
+2024-11-28 13:23:23 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:23:24 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:24:59 - Program başlatıldı.
+2024-11-28 13:25:00 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:25:02 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:25:59 - Program başlatıldı.
+2024-11-28 13:26:00 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:26:01 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:26:24 - Program başlatıldı.
+2024-11-28 13:26:25 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:26:26 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:27:11 - Program başlatıldı.
+2024-11-28 13:27:12 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:27:14 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:27:29 - Program başlatıldı.
+2024-11-28 13:27:30 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:27:33 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:27:58 - Program başlatıldı.
+2024-11-28 13:27:59 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:28:00 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:28:28 - Program başlatıldı.
+2024-11-28 13:28:32 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:28:34 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:29:24 - Program başlatıldı.
+2024-11-28 13:29:31 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:29:33 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:30:14 - Program başlatıldı.
+2024-11-28 13:30:15 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:30:17 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:32:24 - Program başlatıldı.
+2024-11-28 13:32:25 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:32:26 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:33:56 - Program başlatıldı.
+2024-11-28 13:33:57 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:33:59 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:34:54 - Program başlatıldı.
+2024-11-28 13:35:20 - Bağlantı Hatası:Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: Named Pipes Provider, error: 40 - SQL Server için bağlantı açılamadı)
+2024-11-28 13:35:41 - Program başlatıldı.
+2024-11-28 13:35:42 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:35:45 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:39:45 - Program başlatıldı.
+2024-11-28 13:39:46 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:39:48 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:40:03 - Program başlatıldı.
+2024-11-28 13:40:04 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:40:05 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:41:44 - Program başlatıldı.
+2024-11-28 13:41:45 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:41:47 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:42:43 - Program başlatıldı.
+2024-11-28 13:42:43 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:42:45 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:43:02 - Program başlatıldı.
+2024-11-28 13:43:03 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:43:04 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:43:43 - Program başlatıldı.
+2024-11-28 13:43:44 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:43:45 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:46:46 - Program başlatıldı.
+2024-11-28 13:46:47 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:46:49 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 13:53:40 - Program başlatıldı.
+2024-11-28 13:53:41 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 13:53:43 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:01:11 - Program başlatıldı.
+2024-11-28 14:01:12 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:01:14 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:04:26 - Program başlatıldı.
+2024-11-28 14:04:26 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:04:28 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:04:50 - Program başlatıldı.
+2024-11-28 14:04:51 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:04:52 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:06:13 - Program başlatıldı.
+2024-11-28 14:06:14 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:06:16 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:08:09 - Program başlatıldı.
+2024-11-28 14:08:10 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:08:11 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:21:21 - Program başlatıldı.
+2024-11-28 14:21:21 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:21:23 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:21:32 - Yedekleme işlemi başlatıldı.
+2024-11-28 14:22:09 - Program başlatıldı.
+2024-11-28 14:22:10 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:22:12 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:22:18 - Yedekleme işlemi başlatıldı.
+2024-11-28 14:42:32 - Yedekleme işlemi tamamlandı.
+2024-11-28 14:50:35 - Program başlatıldı.
+2024-11-28 14:50:36 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:50:38 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:51:00 - Yedekleme işlemi başlatıldı.
+2024-11-28 14:55:41 - Program başlatıldı.
+2024-11-28 14:55:42 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:55:43 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 14:56:00 - Yedekleme işlemi başlatıldı.
+2024-11-28 14:58:48 - Program başlatıldı.
+2024-11-28 14:58:50 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 14:58:51 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 15:00:00 - Yedekleme işlemi başlatıldı.
+2024-11-28 15:00:02 - Yedekleme işlemi tamamlandı.
+2024-11-28 15:00:03 - Yedekleme tamamlandıktan sonra e-posta gönderildi.
+2024-11-28 15:09:29 - Program başlatıldı.
+2024-11-28 15:09:30 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 15:09:32 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 15:13:04 - Program başlatıldı.
+2024-11-28 15:13:05 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 15:13:07 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 15:20:56 - Program başlatıldı.
+2024-11-28 15:20:57 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 15:20:58 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 15:22:19 - Program başlatıldı.
+2024-11-28 15:22:20 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 15:22:21 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 15:25:34 - Program başlatıldı.
+2024-11-28 15:25:35 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 15:25:36 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 15:29:03 - Program başlatıldı.
+2024-11-28 15:29:04 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 15:29:06 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 15:37:46 - Program başlatıldı.
+2024-11-28 15:38:17 - Bağlantı Hatası:Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: Named Pipes Provider, error: 40 - SQL Server için bağlantı açılamadı)
+2024-11-28 15:38:54 - Program başlatıldı.
+2024-11-28 15:38:55 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 15:38:56 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 16:16:57 - Program başlatıldı.
+2024-11-28 16:16:58 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 16:17:00 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 16:36:33 - Program başlatıldı.
+2024-11-28 16:37:02 - Program başlatıldı.
+2024-11-28 16:39:31 - Program başlatıldı.
+2024-11-28 16:39:54 - Program başlatıldı.
+2024-11-28 16:39:54 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 16:39:56 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 16:40:39 - Program başlatıldı.
+2024-11-28 16:40:40 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 16:40:41 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 16:42:19 - Program başlatıldı.
+2024-11-28 16:42:19 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 16:42:21 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 17:24:34 - Program başlatıldı.
+2024-11-28 17:24:50 - Bağlantı Hatası: Login failed for user ''.
+2024-11-28 17:25:44 - Program başlatıldı.
+2024-11-28 17:25:45 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 17:25:47 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 17:39:40 - Program başlatıldı.
+2024-11-28 17:39:41 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 17:39:43 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 17:49:07 - Program başlatıldı.
+2024-11-28 18:04:46 - Program başlatıldı.
+2024-11-28 18:04:47 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 18:04:58 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-11-28 18:05:47 - Program başlatıldı.
+2024-11-28 18:05:47 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-11-28 18:05:49 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 1 gün kalmıştır.
+2024-12-05 18:04:09 - Program başlatıldı.
+2024-12-16 11:26:24 - Program başlatıldı.
+2024-12-16 15:31:05 - Program başlatıldı.
+2024-12-16 15:31:47 - Program başlatıldı.
+2024-12-16 15:33:02 - Program başlatıldı.
+2024-12-16 15:41:11 - Program başlatıldı.
+2024-12-16 15:42:26 - Program başlatıldı.
+2024-12-16 15:43:32 - Program başlatıldı.
+2024-12-16 15:46:13 - Program başlatıldı.
+2024-12-16 15:48:46 - Program başlatıldı.
+2024-12-16 15:50:11 - Program başlatıldı.
+2024-12-16 15:50:48 - Program başlatıldı.
+2024-12-16 15:51:30 - Program başlatıldı.
+2024-12-16 15:51:38 - Yedekleme işlemi başlatıldı.
+2024-12-16 15:52:38 - Program başlatıldı.
+2024-12-16 15:53:17 - Program başlatıldı.
+2024-12-16 15:53:36 - Program başlatıldı.
+2024-12-16 15:53:56 - Program başlatıldı.
+2024-12-16 15:54:12 - Program başlatıldı.
+2024-12-16 15:56:29 - Program başlatıldı.
+2024-12-16 15:57:19 - Program başlatıldı.
+2024-12-16 15:57:36 - Program başlatıldı.
+2024-12-16 16:03:18 - Program başlatıldı.
+2024-12-16 16:06:22 - Program başlatıldı.
+2024-12-16 16:09:02 - Program başlatıldı.
+2024-12-16 16:35:26 - Program başlatıldı.
+2024-12-16 16:52:34 - Program başlatıldı.
+2024-12-16 16:53:03 - Program başlatıldı.
+2024-12-16 17:02:43 - Program başlatıldı.
+2024-12-16 17:06:24 - Program başlatıldı.
+2024-12-16 17:08:32 - Program başlatıldı.
+2024-12-16 17:12:00 - Program başlatıldı.
+2024-12-16 17:15:37 - Program başlatıldı.
+2024-12-16 17:17:22 - Program başlatıldı.
+2024-12-16 17:18:32 - Program başlatıldı.
+2024-12-25 15:52:08 - Program başlatıldı.
+2024-12-25 15:52:42 - Bağlantı Hatası: Sunucuyla bağlantı kurulurken ağ ile ilgili veya örneğe özel bir hata oluştu. Sunucu bulunamadı veya sunucuya erişilemiyor. Örnek adının doğru olduğunu ve SQL Server'ın uzak bağlantılara izin verdiğini doğrulayın. (provider: Named Pipes Provider, error: 40 - SQL Server için bağlantı açılamadı)
+2024-12-26 11:00:59 - Program başlatıldı.
+2024-12-26 11:03:03 - Program başlatıldı.
+2024-12-26 11:03:53 - Program başlatıldı.
+2024-12-26 11:03:54 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:03:56 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:04:04 - Bağlantı Hatası: Login failed for user ''.
+2024-12-26 11:04:27 - Yedekleme işlemi başlatıldı.
+2024-12-26 11:04:32 - Yedekleme işlemi tamamlandı.
+2024-12-26 11:07:17 - Program başlatıldı.
+2024-12-26 11:07:18 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:07:21 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:07:24 - Yedekleme işlemi başlatıldı.
+2024-12-26 11:07:29 - Yedekleme işlemi tamamlandı.
+2024-12-26 11:09:32 - Program başlatıldı.
+2024-12-26 11:09:33 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:09:36 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:14:11 - Program başlatıldı.
+2024-12-26 11:14:12 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:14:14 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:24:01 - Program başlatıldı.
+2024-12-26 11:24:02 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:24:03 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:24:17 - Program başlatıldı.
+2024-12-26 11:24:17 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:24:20 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:24:23 - Yedekleme işlemi başlatıldı.
+2024-12-26 11:24:28 - Yedekleme işlemi tamamlandı.
+2024-12-26 11:24:43 - Yedekleme işlemi başlatıldı.
+2024-12-26 11:24:49 - Yedekleme işlemi tamamlandı.
+2024-12-26 11:30:37 - Program başlatıldı.
+2024-12-26 11:30:38 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:30:41 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:30:51 - Program başlatıldı.
+2024-12-26 11:30:52 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:30:54 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:31:27 - Program başlatıldı.
+2024-12-26 11:31:27 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:31:29 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:31:32 - Yedekleme işlemi başlatıldı.
+2024-12-26 11:31:37 - Yedekleme işlemi tamamlandı.
+2024-12-26 11:33:28 - Program başlatıldı.
+2024-12-26 11:33:29 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:33:30 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:34:16 - Program başlatıldı.
+2024-12-26 11:34:17 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:34:18 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:36:35 - Program başlatıldı.
+2024-12-26 11:36:35 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:36:39 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:37:00 - Yedekleme işlemi başlatıldı.
+2024-12-26 11:37:04 - Yedekleme işlemi tamamlandı.
+2024-12-26 11:37:05 - Yedekleme tamamlandıktan sonra e-posta gönderildi.
+2024-12-26 11:38:00 - Yedekleme işlemi başlatıldı.
+2024-12-26 11:38:04 - Yedekleme işlemi tamamlandı.
+2024-12-26 11:38:05 - Yedekleme tamamlandıktan sonra e-posta gönderildi.
+2024-12-26 11:39:49 - Program başlatıldı.
+2024-12-26 11:39:49 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:39:51 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:41:20 - Program başlatıldı.
+2024-12-26 11:41:20 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 11:41:21 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 11:42:01 - Yedekleme işlemi başlatıldı.
+2024-12-26 11:47:57 - Yedekleme işlemi tamamlandı.
+2024-12-26 12:23:00 - Program başlatıldı.
+2024-12-26 12:23:01 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:23:03 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:23:58 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:24:03 - Yedekleme işlemi tamamlandı.
+2024-12-26 12:24:26 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:24:32 - Yedekleme işlemi tamamlandı.
+2024-12-26 12:25:02 - Program başlatıldı.
+2024-12-26 12:25:03 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:25:04 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:25:29 - Program başlatıldı.
+2024-12-26 12:25:57 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:26:26 - Yedekleme hatası: Google Drive yükleme hatası: The service drive has thrown an exception.
+HttpStatusCode is NotFound.
+Google.Apis.Requests.RequestError
+File not found: . [404]
+Errors [
+	Message[File not found: .] Location[fileId - parameter] Reason[notFound] Domain[global]
+]
+
+Google.GoogleApiException: The service drive has thrown an exception. HttpStatusCode is NotFound. File not found: .
+   konum: Google.Apis.Upload.ResumableUpload`1.<InitiateSessionAsync>d__25.MoveNext()
+--- Özel durumun oluşturulduğu önceki konumdan başlayan yığın izlemesinin sonu ---
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: Google.Apis.Upload.ResumableUpload.<UploadAsync>d__67.MoveNext()
+2024-12-26 12:26:34 - Program başlatıldı.
+2024-12-26 12:26:55 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:26:58 - Yedekleme hatası: Google Drive yükleme hatası: The service drive has thrown an exception.
+HttpStatusCode is NotFound.
+Google.Apis.Requests.RequestError
+File not found: . [404]
+Errors [
+	Message[File not found: .] Location[fileId - parameter] Reason[notFound] Domain[global]
+]
+
+Google.GoogleApiException: The service drive has thrown an exception. HttpStatusCode is NotFound. File not found: .
+   konum: Google.Apis.Upload.ResumableUpload`1.<InitiateSessionAsync>d__25.MoveNext()
+--- Özel durumun oluşturulduğu önceki konumdan başlayan yığın izlemesinin sonu ---
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: Google.Apis.Upload.ResumableUpload.<UploadAsync>d__67.MoveNext()
+2024-12-26 12:27:18 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:27:24 - Yedekleme hatası: Google Drive yükleme hatası: The service drive has thrown an exception.
+HttpStatusCode is NotFound.
+Google.Apis.Requests.RequestError
+File not found: . [404]
+Errors [
+	Message[File not found: .] Location[fileId - parameter] Reason[notFound] Domain[global]
+]
+
+Google.GoogleApiException: The service drive has thrown an exception. HttpStatusCode is NotFound. File not found: .
+   konum: Google.Apis.Upload.ResumableUpload`1.<InitiateSessionAsync>d__25.MoveNext()
+--- Özel durumun oluşturulduğu önceki konumdan başlayan yığın izlemesinin sonu ---
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: Google.Apis.Upload.ResumableUpload.<UploadAsync>d__67.MoveNext()
+2024-12-26 12:27:54 - Program başlatıldı.
+2024-12-26 12:28:20 - Program başlatıldı.
+2024-12-26 12:29:58 - Program başlatıldı.
+2024-12-26 12:30:15 - Program başlatıldı.
+2024-12-26 12:30:16 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:30:19 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:32:55 - Program başlatıldı.
+2024-12-26 12:32:56 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:32:58 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:33:03 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:33:16 - Yedekleme hatası: Google Drive yükleme hatası: The service drive has thrown an exception.
+HttpStatusCode is NotFound.
+Google.Apis.Requests.RequestError
+File not found: . [404]
+Errors [
+	Message[File not found: .] Location[fileId - parameter] Reason[notFound] Domain[global]
+]
+
+Google.GoogleApiException: The service drive has thrown an exception. HttpStatusCode is NotFound. File not found: .
+   konum: Google.Apis.Upload.ResumableUpload`1.<InitiateSessionAsync>d__25.MoveNext()
+--- Özel durumun oluşturulduğu önceki konumdan başlayan yığın izlemesinin sonu ---
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: Google.Apis.Upload.ResumableUpload.<UploadAsync>d__67.MoveNext()
+2024-12-26 12:33:49 - Program başlatıldı.
+2024-12-26 12:33:50 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:33:52 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:34:08 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:34:36 - Yedekleme hatası: Google Drive yükleme hatası: The service drive has thrown an exception.
+HttpStatusCode is NotFound.
+Google.Apis.Requests.RequestError
+File not found: . [404]
+Errors [
+	Message[File not found: .] Location[fileId - parameter] Reason[notFound] Domain[global]
+]
+
+Google.GoogleApiException: The service drive has thrown an exception. HttpStatusCode is NotFound. File not found: .
+   konum: Google.Apis.Upload.ResumableUpload`1.<InitiateSessionAsync>d__25.MoveNext()
+--- Özel durumun oluşturulduğu önceki konumdan başlayan yığın izlemesinin sonu ---
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: Google.Apis.Upload.ResumableUpload.<UploadAsync>d__67.MoveNext()
+2024-12-26 12:35:14 - Program başlatıldı.
+2024-12-26 12:35:15 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:35:17 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:35:20 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:36:44 - Yedekleme hatası: Google Drive yükleme hatası: The service drive has thrown an exception.
+HttpStatusCode is NotFound.
+Google.Apis.Requests.RequestError
+File not found: . [404]
+Errors [
+	Message[File not found: .] Location[fileId - parameter] Reason[notFound] Domain[global]
+]
+
+Google.GoogleApiException: The service drive has thrown an exception. HttpStatusCode is NotFound. File not found: .
+   konum: Google.Apis.Upload.ResumableUpload`1.<InitiateSessionAsync>d__25.MoveNext()
+--- Özel durumun oluşturulduğu önceki konumdan başlayan yığın izlemesinin sonu ---
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: Google.Apis.Upload.ResumableUpload.<UploadAsync>d__67.MoveNext()
+2024-12-26 12:37:58 - Program başlatıldı.
+2024-12-26 12:37:59 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:38:00 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:38:00 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:38:04 - Yedekleme hatası: Google Drive yükleme hatası: The service drive has thrown an exception.
+HttpStatusCode is NotFound.
+Google.Apis.Requests.RequestError
+File not found: . [404]
+Errors [
+	Message[File not found: .] Location[fileId - parameter] Reason[notFound] Domain[global]
+]
+
+Google.GoogleApiException: The service drive has thrown an exception. HttpStatusCode is NotFound. File not found: .
+   konum: Google.Apis.Upload.ResumableUpload`1.<InitiateSessionAsync>d__25.MoveNext()
+--- Özel durumun oluşturulduğu önceki konumdan başlayan yığın izlemesinin sonu ---
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: Google.Apis.Upload.ResumableUpload.<UploadAsync>d__67.MoveNext()
+2024-12-26 12:39:02 - Program başlatıldı.
+2024-12-26 12:39:03 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:39:04 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:39:14 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:39:35 - Program başlatıldı.
+2024-12-26 12:39:36 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:39:38 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:39:50 - Program başlatıldı.
+2024-12-26 12:39:50 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:39:53 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:40:18 - Program başlatıldı.
+2024-12-26 12:40:18 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:40:20 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:42:25 - Program başlatıldı.
+2024-12-26 12:42:26 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:42:28 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:42:31 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:42:40 - Yedekleme hatası: Google Drive yükleme hatası: The service drive has thrown an exception.
+HttpStatusCode is NotFound.
+Google.Apis.Requests.RequestError
+File not found: . [404]
+Errors [
+	Message[File not found: .] Location[fileId - parameter] Reason[notFound] Domain[global]
+]
+
+Google.GoogleApiException: The service drive has thrown an exception. HttpStatusCode is NotFound. File not found: .
+   konum: Google.Apis.Upload.ResumableUpload`1.<InitiateSessionAsync>d__25.MoveNext()
+--- Özel durumun oluşturulduğu önceki konumdan başlayan yığın izlemesinin sonu ---
+   konum: System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   konum: System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   konum: Google.Apis.Upload.ResumableUpload.<UploadAsync>d__67.MoveNext()
+2024-12-26 12:43:49 - Program başlatıldı.
+2024-12-26 12:43:50 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:43:51 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:46:07 - Program başlatıldı.
+2024-12-26 12:46:07 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:46:09 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:47:24 - Program başlatıldı.
+2024-12-26 12:47:25 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 12:47:26 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 12:47:33 - Yedekleme işlemi başlatıldı.
+2024-12-26 12:47:37 - Yedekleme işlemi tamamlandı.
+2024-12-26 13:00:31 - Program başlatıldı.
+2024-12-26 13:00:32 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:03:04 - Program başlatıldı.
+2024-12-26 13:03:05 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:03:06 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:03:26 - Yedekleme işlemi başlatıldı.
+2024-12-26 13:03:31 - Yedekleme işlemi tamamlandı.
+2024-12-26 13:04:02 - Program başlatıldı.
+2024-12-26 13:04:03 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:04:05 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:04:07 - Yedekleme işlemi başlatıldı.
+2024-12-26 13:04:12 - Yedekleme işlemi tamamlandı.
+2024-12-26 13:05:26 - Program başlatıldı.
+2024-12-26 13:05:27 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:05:28 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:05:30 - Yedekleme işlemi başlatıldı.
+2024-12-26 13:05:35 - Yedekleme işlemi tamamlandı.
+2024-12-26 13:06:15 - Program başlatıldı.
+2024-12-26 13:06:16 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:11:17 - Program başlatıldı.
+2024-12-26 13:11:18 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:11:20 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:14:20 - Program başlatıldı.
+2024-12-26 13:14:21 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:14:22 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:14:23 - Yedekleme işlemi başlatıldı.
+2024-12-26 13:14:30 - Yedekleme işlemi tamamlandı.
+2024-12-26 13:17:20 - Program başlatıldı.
+2024-12-26 13:17:20 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:17:22 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:18:38 - Program başlatıldı.
+2024-12-26 13:18:38 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:18:41 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:25:32 - Program başlatıldı.
+2024-12-26 13:25:42 - Bağlantı Hatası:Invalid column name 'google_drive_folder_id'.
+2024-12-26 13:26:31 - Program başlatıldı.
+2024-12-26 13:26:34 - Bağlantı Hatası:Invalid column name 'google_drive_folder_id'.
+2024-12-26 13:26:54 - Program başlatıldı.
+2024-12-26 13:27:35 - Program başlatıldı.
+2024-12-26 13:27:35 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:27:37 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:27:40 - Yedekleme işlemi başlatıldı.
+2024-12-26 13:27:48 - Yedekleme işlemi tamamlandı.
+2024-12-26 13:28:11 - Program başlatıldı.
+2024-12-26 13:28:12 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:28:12 - Lisans süresi e-posta gönderim hatası: 'addresses' parametresi boş dize olamaz.
+Parametre adı: addresses
+2024-12-26 13:29:00 - Program başlatıldı.
+2024-12-26 13:29:01 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:29:01 - Lisans süresi e-posta gönderim hatası: 'addresses' parametresi boş dize olamaz.
+Parametre adı: addresses
+2024-12-26 13:30:03 - Program başlatıldı.
+2024-12-26 13:30:36 - Program başlatıldı.
+2024-12-26 13:30:37 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:30:40 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:30:45 - Yedekleme işlemi başlatıldı.
+2024-12-26 13:30:50 - Yedekleme işlemi tamamlandı.
+2024-12-26 13:50:38 - Program başlatıldı.
+2024-12-26 13:51:14 - Program başlatıldı.
+2024-12-26 13:51:14 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:51:16 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:51:51 - Program başlatıldı.
+2024-12-26 13:51:52 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:51:54 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2024-12-26 13:55:32 - Program başlatıldı.
+2024-12-26 13:55:32 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2024-12-26 13:55:34 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.

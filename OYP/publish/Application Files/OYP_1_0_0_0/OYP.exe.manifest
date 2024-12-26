@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="OYP.exe" version="1.0.0.0" publicKeyToken="2277b2075329e346" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="OYP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="OYP.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Data.Desktop.v23.1.dll" size="936552">
+      <assemblyIdentity name="DevExpress.Data.Desktop.v23.1" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>G456M2JTOgXQ0uGXw7u/OuqaxI1JwdHDi9qoYWL1azI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Data.v23.1.dll" size="5552232">
+      <assemblyIdentity name="DevExpress.Data.v23.1" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kPSF4bhjSVB8QHpR2FxpjTT8gXJ7kFeylqZtBFlynSw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Drawing.v23.1.dll" size="942696">
+      <assemblyIdentity name="DevExpress.Drawing.v23.1" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>8IpdRRyvAXsmvU732kKrNyk9kb2eXYpeOt9ijsKEw1I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Pdf.v23.1.Core.dll" size="5113960">
+      <assemblyIdentity name="DevExpress.Pdf.v23.1.Core" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>1bk3HYNHcYsV6s/bYpzW0Ar2Th6g4E+/2rfkdQuWhAM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Pdf.v23.1.Drawing.dll" size="530032">
+      <assemblyIdentity name="DevExpress.Pdf.v23.1.Drawing" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>lBxhGZosenVp40dRp9Bf7BNwHRaA+iM826b1zBDalAg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Printing.v23.1.Core.dll" size="4512368">
+      <assemblyIdentity name="DevExpress.Printing.v23.1.Core" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>p1L3TcgDGas4uFY/UfUBfAl90ggN4xAKNhjBZjB73KA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Sparkline.v23.1.Core.dll" size="92784">
+      <assemblyIdentity name="DevExpress.Sparkline.v23.1.Core" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sYu/gDWxsGGm356ZPMYRSUFHzZWw1ADpIeF7QNloHVU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.Utils.v23.1.dll" size="20633712">
+      <assemblyIdentity name="DevExpress.Utils.v23.1" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>CgZEsARNYFb28yHqMCdUDtAy39e+e1S0CTqv4OX+hhI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.XtraBars.v23.1.dll" size="7013480">
+      <assemblyIdentity name="DevExpress.XtraBars.v23.1" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>oRKmqHiP2MWYceYGD4lQuOVx3u2zF9UF08BMx/hKdfs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevExpress.XtraEditors.v23.1.dll" size="8188520">
+      <assemblyIdentity name="DevExpress.XtraEditors.v23.1" version="23.1.5.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>lLMPw8RoHaAUWCRW74NutgssiakFCy09jrWHfgrfbfw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OYP.exe" size="59336">
+      <assemblyIdentity name="OYP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>qqUGA7YzxKSaFQxv2XkH1VjsQcZAM6QLkhlQ0NSxrOM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="OYP.exe.config" size="2277">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bJJsp3M6nxv5X36bn+bnUrEAzXe7AMy9VNDUTHN6IUc=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=MUHARREM\MUHARREM" issuerKeyHash="bc95552840d748bc2baeddf212d4c0654568cfcd" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3C7FhBFe2u60wq+V8s81dotddbBTJv6ia6BsaR3MuuM=</DigestValue></Reference></SignedInfo><SignatureValue>BxwWI0KAj0Tq083Vd5VjVMS30nhs4WxSmBwnVk3Ckfz8JRVk1/wILlFQsnm0tGGM41WgOfuf3m+/EbX/CrTO3lVwR9DPu+h851vt0hLmNMyfM554xzfzSGbptp9n5LXs436hzh3Ilcofzaj4O8BWhsOp4MPyQymYycSwkcOyAHQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>qMc7F4KaYGWDwMgmEpU+XGqBjF+EfgZXkiR2cqfiun71FC5/AQPRvL15g4KDkSh6Oq3IRsQDME06KSEQtFuog/8MJHwdYW8Aeej/GcMfCOgtPS4LUlx71XB95nvWIbYf+m0U3mUFJC684kL3YQdhirdqCvxsv601K/CG2hxh2fk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e3bacc1d696ca06ba2fe2653b0755d8b7635cff295afc2b4eeda5e1184c52edc" Description="" Url=""><as:assemblyIdentity name="OYP.exe" version="1.0.0.0" publicKeyToken="2277b2075329e346" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MUHARREM\MUHARREM</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>fEVdkO30pbPKlIHjaXn29OX/JdrDi6zVgI0DOTkEGgY=</DigestValue></Reference></SignedInfo><SignatureValue>lMGK+JwcNFb3VO2pnP7cxEkiS0avwRRf9duysnsLvI5QTDN7Fn5FutY3Cg/riHHsqGNyBOR0yqP6AgStv6o74gnPPnyIgOU07yF0jzTGJN5XHo7Prgs+I2OjE5+/oUr/oUgV7UjK6CIkv8z/wo9fKSF8bzOyjA+Zl65NXLhTcmA=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>qMc7F4KaYGWDwMgmEpU+XGqBjF+EfgZXkiR2cqfiun71FC5/AQPRvL15g4KDkSh6Oq3IRsQDME06KSEQtFuog/8MJHwdYW8Aeej/GcMfCOgtPS4LUlx71XB95nvWIbYf+m0U3mUFJC684kL3YQdhirdqCvxsv601K/CG2hxh2fk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB3TCCAUagAwIBAgIQM5KjXlXcB69ASN819ExpAzANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDHiIATQBVAEgAQQBSAFIARQBNAFwATQBVAEgAQQBSAFIARQBNMB4XDTI0MTExNDExMDQ0N1oXDTI1MTExNDE3MDQ0N1owLTErMCkGA1UEAx4iAE0AVQBIAEEAUgBSAEUATQBcAE0AVQBIAEEAUgBSAEUATTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAqMc7F4KaYGWDwMgmEpU+XGqBjF+EfgZXkiR2cqfiun71FC5/AQPRvL15g4KDkSh6Oq3IRsQDME06KSEQtFuog/8MJHwdYW8Aeej/GcMfCOgtPS4LUlx71XB95nvWIbYf+m0U3mUFJC684kL3YQdhirdqCvxsv601K/CG2hxh2fkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBSJy3n/n4deMtvulfGbKe8X+yRb8w8xO23heBPDevgtL/taE8h937PaUSrGDPlrsJNXX8R1aOBzBOlTyHtW3S4N5tEWP4r+LoH+D+vWUYRTA3Jn1SJfV7cmco5ly+4K0h55Zmq/lowco75yH4Cqx7d6IHpPuA+7OdbRJbNMG3CVg==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
