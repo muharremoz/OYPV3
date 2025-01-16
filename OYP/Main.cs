@@ -56,7 +56,6 @@ namespace OYP
             notifyIcon1.Icon = Properties.Resources.logo; // İkon adınızı kullanın
             notifyIcon1.Text = "Otomatik Yedekleme Programı";
             notifyIcon1.Visible = true;
-            AuthenticateToGoogleDrive(); // Servis başlatma burada yapılır
 
         }
         private static System.Timers.Timer updateTimer;
@@ -68,25 +67,38 @@ namespace OYP
         
        private void AuthenticateToGoogleDrive()
         {
-            UserCredential credential;
-
-            using (var stream = new FileStream("drive.json", FileMode.Open, FileAccess.Read))
+            try
             {
-                string credPath = "token.json";
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.FromStream(stream).Secrets,
-                    new[] { DriveService.Scope.Drive },
-                    "user",
-                    CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;
+                UserCredential credential;
+
+                // Programın çalıştığı dizinde drive.json dosyasını arıyoruz
+                string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "drive.json");
+
+                using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                {
+                    string credPath = "token.json";
+                    credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                        GoogleClientSecrets.FromStream(stream).Secrets,
+                        new[] { DriveService.Scope.Drive },
+                        "user",
+                        CancellationToken.None,
+                        new FileDataStore(credPath, true)).Result;
+                }
+
+                _service = new DriveService(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = credential,
+                    ApplicationName = "Google Drive Uploader",
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while authenticating to Google Drive: {ex.Message}");
+                throw; // Hatanın üst seviyeye iletilmesini istiyorsanız bu satırı bırakabilirsiniz.
             }
 
-            _service = new DriveService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = "Google Drive Uploader",
-            });
         }
+
         private async Task UploadFileToGoogleDrive(string filePath)
         {
             // Google Drive klasör ID'sini Settings dosyasından alıyoruz
@@ -120,6 +132,7 @@ namespace OYP
                 throw;
             }
         }
+
         private string GetMimeType(string fileName)
         {
             var mimeType = "application/unknown";
@@ -131,6 +144,7 @@ namespace OYP
             }
             return mimeType;
         }
+
         public async void BackupDatabases(DateTime? backupTime = null, string backupSuffix = "", string backupFlag = "", bool isAutomatic = false, bool sendEmail = true)
         {
             LogManager.WriteLog("Yedekleme işlemi başlatıldı.");
@@ -352,6 +366,7 @@ namespace OYP
                 LogManager.WriteLog("Backup_1 ve Backup_2 kayıtları sıfırlanırken hata oldu: "+ex.Message);
             }
         }
+
         private async void CheckForUpdates()
         {
             try
@@ -384,6 +399,7 @@ namespace OYP
                 XtraMessageBox.Show("Güncelleme kontrolü sırasında bir hata oluştu: " + ex.Message, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void StartUpdate()
 
         {
@@ -412,6 +428,7 @@ namespace OYP
                 XtraMessageBox.Show("Güncelleme sırasında bir hata oluştu: " + ex.Message);
             }
         }
+
         private void Main_Load(object sender, EventArgs e)
         {
             txtDriveFolderID.Text= Properties.Settings.Default.DriveFolderID;
@@ -426,7 +443,7 @@ namespace OYP
             {
                 // Eğer FTP bağlantısı yapılmamışsa veya firma adı boşsa ikinci sayfayı aç
                 navigationFrame1.SelectedPage = navigationPage2;
-                XtraMessageBox.Show("Firma bilgilerinde hata var . Lütfen Bilgileri düzeltin.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //XtraMessageBox.Show("Firma bilgilerinde hata var . Lütfen Bilgileri düzeltin.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -554,7 +571,7 @@ namespace OYP
                         Properties.Settings.Default.Save();
 
                         lbl_FTPStatus.Text = "Firma aktif.";
-                        lbl_FTPStatus.ForeColor = Color.LimeGreen;
+                        lbl_FTPStatus.ForeColor = Color.DarkGreen;
 
                         txt_Company.Enabled = false;
 
@@ -562,7 +579,7 @@ namespace OYP
                     }
                     else
                     {
-                        lbl_FTPStatus.Text = "Firma adı bulunamadı.";
+                        lbl_FTPStatus.Text = "Firma bağlantısı yapılmamış.";
                         lbl_FTPStatus.ForeColor = Color.IndianRed;
                         return false; // Firma adı bulunamadı
                     }
@@ -574,75 +591,6 @@ namespace OYP
                 XtraMessageBox.Show(errorMessage, "Bağlantı Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LogManager.WriteLog("Bağlantı Hatası:" + ex.Message);
                 return false; // Hata durumunda false döndür
-            }
-        }
-
-
-        private async Task UploadBackupToFTP(string zipFilePath, bool isAutomatic)
-        {
-            try
-            {
-                string ftpServerAddress = "ftp://oypwan.bilkar.net";
-                string ftpUsername = Properties.Settings.Default.FtpUsername;
-                string ftpPassword = Properties.Settings.Default.FtpPassword;
-
-                // System.IO.FileInfo ile dosya boyutunu alıyoruz
-                System.IO.FileInfo fileInfo = new System.IO.FileInfo(zipFilePath);
-                long totalFileSize = fileInfo.Length;
-                double totalFileSizeMB = totalFileSize / (1024.0 * 1024.0);
-
-                Invoke((MethodInvoker)(() => lbl_Bar.Text = $"Dosya Boyutu: {totalFileSizeMB:0.00} MB"));
-
-                FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(ftpServerAddress + "/" + Path.GetFileName(zipFilePath));
-                ftpRequest.Method = WebRequestMethods.Ftp.UploadFile;
-                ftpRequest.Credentials = new NetworkCredential(ftpUsername, ftpPassword);
-                ftpRequest.KeepAlive = false;
-                ftpRequest.UseBinary = true;
-                ftpRequest.UsePassive = true;
-
-                using (FileStream fileStream = new FileStream(zipFilePath, FileMode.Open, FileAccess.Read))
-                using (Stream ftpStream = ftpRequest.GetRequestStream())
-                {
-                    byte[] buffer = new byte[4096];
-                    int bytesRead;
-                    long totalBytesUploaded = 0;
-
-                    Invoke((MethodInvoker)(() =>
-                    {
-                        progressBar.Properties.Maximum = (int)totalFileSize;
-                        progressBar.EditValue = 0;
-                    }));
-
-                    while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) > 0)
-                    {
-                        await ftpStream.WriteAsync(buffer, 0, bytesRead);
-                        totalBytesUploaded += bytesRead;
-
-                        Invoke((MethodInvoker)(() =>
-                        {
-                            progressBar.EditValue = totalBytesUploaded;
-                            double uploadedMB = totalBytesUploaded / (1024.0 * 1024.0);
-                            lbl_Bar.Text = $"{uploadedMB:0.00} MB / {totalFileSizeMB:0.00} MB Yükleniyor";
-                        }));
-                    }
-                }
-
-                if (!isAutomatic)
-                {
-                    Invoke((MethodInvoker)(() =>
-                        XtraMessageBox.Show("Dosya başarıyla FTP'ye yüklendi.", "FTP Yükleme Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    ));
-                }
-            }
-            catch (Exception ex)
-            {
-                if (!isAutomatic)
-                {
-                    Invoke((MethodInvoker)(() =>
-                        XtraMessageBox.Show($"FTP yükleme sırasında hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    ));
-                    LogManager.WriteLog("FTP yükleme sırasında hata oluştu: " + ex.Message);
-                }
             }
         }
 
@@ -663,24 +611,24 @@ namespace OYP
                 double backupFileSizeMB = backupFileInfo.Length / (1024.0 * 1024.0); // MB olarak
 
                 string body = $@"
-    <html>
-    <body style='font-family: Arial, sans-serif;'>
-        <h2 style='text-align: center;'>Yedekleme Durum Raporu</h2>
-        <table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 50%; margin: 0 auto;'>
-            <tr style='background-color: #f2f2f2;'>
-                <th style='text-align: center;'>Firma Adı</th>
-                <th style='text-align: center;'>Yedek Dosya Adı</th>
-                <th style='text-align: center;'>Boyut</th>
-            </tr>
-            <tr>
-                <td style='text-align: center;'>{companyName}</td>
-                <td style='text-align: center;'>{Path.GetFileName(zipFileName)}</td>
-                <td style='text-align: center;'>{backupFileSizeMB:0.00} MB</td>
-            </tr>
-        </table>
-        <p style='text-align: center; font-weight: bold; color: green;'>Yedekleme işlemi başarıyla tamamlanmıştır.</p>
-    </body>
-    </html>";
+                <html>
+                <body style='font-family: Arial, sans-serif;'>
+                    <h2 style='text-align: center;'>Yedekleme Durum Raporu</h2>
+                    <table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 50%; margin: 0 auto;'>
+                        <tr style='background-color: #f2f2f2;'>
+                            <th style='text-align: center;'>Firma Adı</th>
+                            <th style='text-align: center;'>Yedek Dosya Adı</th>
+                            <th style='text-align: center;'>Boyut</th>
+                        </tr>
+                        <tr>
+                            <td style='text-align: center;'>{companyName}</td>
+                            <td style='text-align: center;'>{Path.GetFileName(zipFileName)}</td>
+                            <td style='text-align: center;'>{backupFileSizeMB:0.00} MB</td>
+                        </tr>
+                    </table>
+                    <p style='text-align: center; font-weight: bold; color: green;'>Yedekleme işlemi başarıyla tamamlanmıştır.</p>
+                </body>
+                </html>";
 
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(fromEmail);
@@ -1391,34 +1339,7 @@ namespace OYP
                 registryKey.DeleteValue(appName, false);
             }
         }
-        private bool CheckFTPConnection(string ftpServerAddress, string ftpUsername, string ftpPassword)
-        {
-            try
-            {
-                // Sabit FTP Bağlantısı kuruyoruz
-                string ftpAddress = "ftp://" + ftpServerAddress; // Sabit FTP sunucu adresi
-                FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(ftpAddress);
-                ftpRequest.Method = WebRequestMethods.Ftp.ListDirectory;
-                ftpRequest.Credentials = new NetworkCredential(ftpUsername, ftpPassword);
-                ftpRequest.Timeout = 10000;  // Timeout süresi 10 saniye
-                ftpRequest.UsePassive = true;
 
-
-                // FTP bağlantısını test ediyoruz
-                using (FtpWebResponse response = (FtpWebResponse)ftpRequest.GetResponse())
-                {
-                    // Eğer FTP bağlantısı başarılı olursa
-                    response.Close(); // Bağlantıyı kapatıyoruz
-                    return true;
-                }
-
-            }
-            catch (WebException)
-            {
-                // FTP bağlantısı başarısız olursa false döndürüyoruz
-                return false;
-            }
-        }
         private void txt_BackupFolder_DoubleClick(object sender, EventArgs e)
         {
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
@@ -1429,6 +1350,7 @@ namespace OYP
                 }
             }
         }
+
         private void btn_Save_Click(object sender, EventArgs e)
         {
             // Seçili veritabanlarını kaydetme
@@ -1475,15 +1397,18 @@ namespace OYP
         {
 
         }
+
         private void groupControl7_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
         {
             ConnectToDatabase();
         }
+
         private void Main_FormClosed_1(object sender, FormClosedEventArgs e)
         {
             LogManager.WriteLog("Program kapatıldı.");
 
         }
+
         private void lbl_license_Click(object sender, EventArgs e)
         {
             // lbl_license'ın değerini kopyala
@@ -1492,6 +1417,7 @@ namespace OYP
             // Kullanıcıya uyarı mesajı göster
             XtraMessageBox.Show("Lisans anahtarı kopyalandı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             ExitApplication(sender, e);
@@ -1618,7 +1544,6 @@ namespace OYP
             XtraMessageBox.Show("Ayarlar başarıyla kaydedildi.");
         }
 
-
         private void barBtnFTPSetting_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             navigationFrame1.SelectedPage = navigationPage2;
@@ -1629,12 +1554,6 @@ namespace OYP
             navigationFrame1.SelectedPage = navigationPage4;
             LoadGrid();
             CreateContextMenu();
-        }
-
-
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            BackupDatabases(sendEmail: false);
         }
 
         private void barBtnSetting_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1683,6 +1602,12 @@ namespace OYP
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             BackupDatabases(sendEmail: false);
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AuthenticateToGoogleDrive(); // Servis başlatma burada yapılır
+
         }
     }
 }

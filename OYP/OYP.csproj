@@ -193,6 +193,13 @@
     <None Include="Resources\logo.ico" />
     <EmbeddedResource Include="Resources\history.png" />
     <EmbeddedResource Include="Resources\download.png" />
+    <None Include="Resources\download2.png" />
+    <None Include="Resources\backup.png" />
+    <None Include="Resources\personalization.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\google-drive.png" />
     <Content Include="upload.ico" />
   </ItemGroup>
   <ItemGroup />

@@ -753,3 +753,11 @@ Parametre adı: addresses
 2024-12-26 13:55:32 - Program başlatıldı.
 2024-12-26 13:55:32 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
 2024-12-26 13:55:34 - Lisans süresi uyarısı e-posta olarak gönderildi: lisans süresinin bitmesine 5 gün kalmıştır.
+2025-01-16 17:11:35 - Program başlatıldı.
+2025-01-16 17:11:36 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2025-01-16 17:12:46 - Program başlatıldı.
+2025-01-16 17:12:46 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2025-01-16 17:13:30 - Program başlatıldı.
+2025-01-16 17:13:30 - Backup_1 ve Backup_2 kayıtları sıfırlandı.
+2025-01-16 17:26:48 - Program başlatıldı.
+2025-01-16 17:26:49 - Backup_1 ve Backup_2 kayıtları sıfırlandı.

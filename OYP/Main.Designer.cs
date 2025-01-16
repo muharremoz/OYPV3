@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions2 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions3 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
-            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.cmb_Parametre = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.cmb_Database = new DevExpress.XtraEditors.CheckedComboBoxEdit();
@@ -101,14 +101,15 @@
             this.barBtnFTPFolder = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnSettingSave = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmb_Parametre.Properties)).BeginInit();
@@ -235,9 +236,9 @@
             this.txt_BackupFolder.Properties.Appearance.Options.UseFont = true;
             this.txt_BackupFolder.Properties.NullText = "asdasdas";
             this.txt_BackupFolder.Size = new System.Drawing.Size(173, 24);
-            toolTipItem2.Text = "Klasör seçmek için çift tıklayın.";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.txt_BackupFolder.SuperTip = superToolTip2;
+            toolTipItem1.Text = "Klasör seçmek için çift tıklayın.";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.txt_BackupFolder.SuperTip = superToolTip1;
             this.txt_BackupFolder.TabIndex = 5;
             this.txt_BackupFolder.DoubleClick += new System.EventHandler(this.txt_BackupFolder_DoubleClick);
             // 
@@ -248,9 +249,9 @@
             this.txt_Mail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txt_Mail.Properties.Appearance.Options.UseFont = true;
             this.txt_Mail.Size = new System.Drawing.Size(180, 24);
-            toolTipItem3.Text = "Yedekleme durumunun gönderileceği adres.";
-            superToolTip3.Items.Add(toolTipItem3);
-            this.txt_Mail.SuperTip = superToolTip3;
+            toolTipItem2.Text = "Yedekleme durumunun gönderileceği adres.";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.txt_Mail.SuperTip = superToolTip2;
             this.txt_Mail.TabIndex = 4;
             // 
             // labelControl3
@@ -354,7 +355,7 @@
             this.groupControl4.Controls.Add(this.groupControl11);
             this.groupControl4.Controls.Add(this.txt_Company);
             this.groupControl4.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Bağlan", true, buttonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Bağlan", true, buttonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
             this.groupControl4.CustomHeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
             this.groupControl4.Location = new System.Drawing.Point(8, 11);
             this.groupControl4.Name = "groupControl4";
@@ -408,7 +409,7 @@
             // 
             this.lbl_FTPStatus.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.lbl_FTPStatus.Appearance.Options.UseFont = true;
-            this.lbl_FTPStatus.Location = new System.Drawing.Point(12, 27);
+            this.lbl_FTPStatus.Location = new System.Drawing.Point(4, 27);
             this.lbl_FTPStatus.Name = "lbl_FTPStatus";
             this.lbl_FTPStatus.Size = new System.Drawing.Size(12, 16);
             this.lbl_FTPStatus.TabIndex = 6;
@@ -482,7 +483,7 @@
             this.navigationFrame1.Controls.Add(this.navigationPage2);
             this.navigationFrame1.Controls.Add(this.navigationPage3);
             this.navigationFrame1.Controls.Add(this.navigationPage4);
-            this.navigationFrame1.Location = new System.Drawing.Point(12, 118);
+            this.navigationFrame1.Location = new System.Drawing.Point(12, 107);
             this.navigationFrame1.Name = "navigationFrame1";
             this.navigationFrame1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage1,
@@ -518,7 +519,7 @@
             this.groupControl7.Controls.Add(this.labelControl7);
             this.groupControl7.Controls.Add(this.labelControl8);
             this.groupControl7.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Bağlan", true, buttonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Bağlan", true, buttonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
             this.groupControl7.CustomHeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
             this.groupControl7.Location = new System.Drawing.Point(8, 11);
             this.groupControl7.Name = "groupControl7";
@@ -739,7 +740,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lbl_web);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 594);
+            this.panel1.Location = new System.Drawing.Point(0, 580);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(440, 19);
             this.panel1.TabIndex = 13;
@@ -755,9 +756,10 @@
             this.barBtnFTPFolder,
             this.barBtnSettingSave,
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.barButtonItem3});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsExpandCollapseMenu.ShowQuickAccessToolbarItem = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -771,9 +773,9 @@
             // 
             // barBtnSetting
             // 
-            this.barBtnSetting.Caption = "Dashboard";
+            this.barBtnSetting.Caption = "Ayarlar";
             this.barBtnSetting.Id = 1;
-            this.barBtnSetting.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnSetting.ImageOptions.SvgImage")));
+            this.barBtnSetting.ImageOptions.Image = global::OYP.Properties.Resources.settings;
             this.barBtnSetting.Name = "barBtnSetting";
             this.barBtnSetting.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barBtnSetting.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnSetting_ItemClick_1);
@@ -782,7 +784,7 @@
             // 
             this.barBtnFTPSetting.Caption = "Firma Ayarları";
             this.barBtnFTPSetting.Id = 2;
-            this.barBtnFTPSetting.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnFTPSetting.ImageOptions.SvgImage")));
+            this.barBtnFTPSetting.ImageOptions.Image = global::OYP.Properties.Resources.personalization;
             this.barBtnFTPSetting.Name = "barBtnFTPSetting";
             this.barBtnFTPSetting.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barBtnFTPSetting.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnFTPSetting_ItemClick);
@@ -800,7 +802,7 @@
             // 
             this.barBtnSettingSave.Caption = "Ayarları Kaydet";
             this.barBtnSettingSave.Id = 5;
-            this.barBtnSettingSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnSettingSave.ImageOptions.SvgImage")));
+            this.barBtnSettingSave.ImageOptions.Image = global::OYP.Properties.Resources.save;
             this.barBtnSettingSave.Name = "barBtnSettingSave";
             this.barBtnSettingSave.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barBtnSettingSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnSettingSave_ItemClick);
@@ -809,9 +811,31 @@
             // 
             this.barButtonItem1.Caption = "Yedek Al";
             this.barButtonItem1.Id = 8;
-            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItem1.ImageOptions.Image = global::OYP.Properties.Resources.download;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Kısayollar";
+            this.barButtonItem2.Id = 9;
+            this.barButtonItem2.ImageOptions.Image = global::OYP.Properties.Resources.information;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipItem3.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem3.Text = resources.GetString("toolTipItem3.Text");
+            superToolTip3.Items.Add(toolTipItem3);
+            this.barButtonItem2.SuperTip = superToolTip3;
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Google Drive Bağlantısı";
+            this.barButtonItem3.Id = 10;
+            this.barButtonItem3.ImageOptions.Image = global::OYP.Properties.Resources.google_drive;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -827,7 +851,6 @@
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.barBtnSetting);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Dashboard";
             // 
             // ribbonPageGroup2
             // 
@@ -835,15 +858,18 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barBtnSettingSave);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "İşlemler";
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.AllowTextClipping = false;
             this.ribbonPageGroup1.ItemLinks.Add(this.barBtnFTPSetting);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnFTPFolder);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Ekranlar";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // defaultLookAndFeel1
             // 
@@ -854,28 +880,11 @@
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Kısayollar";
-            this.barButtonItem2.Id = 9;
-            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            toolTipItem4.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipItem4.Text = resources.GetString("toolTipItem4.Text");
-            superToolTip4.Items.Add(toolTipItem4);
-            this.barButtonItem2.SuperTip = superToolTip4;
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 613);
+            this.ClientSize = new System.Drawing.Size(440, 599);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.navigationFrame1);
@@ -1030,6 +1039,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }
 
