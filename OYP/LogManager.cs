@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OYP
 {
@@ -15,9 +16,16 @@ namespace OYP
 
         public static void WriteLog(string message)
         {
-            using (StreamWriter writer = new StreamWriter(logFilePath, true))
+            try
             {
-                writer.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
+                using (StreamWriter writer = new StreamWriter(logFilePath, true))
+                {
+                    writer.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Log yazılamadı: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

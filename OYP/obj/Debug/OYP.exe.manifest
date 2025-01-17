@@ -307,14 +307,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OYP.exe" size="302536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OYP.exe" size="288200">
       <assemblyIdentity name="OYP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>N5t6vhfWSxfGrkJmUoO0CcYISwh8lacJVDfHM1/59O8=</dsig:DigestValue>
+        <dsig:DigestValue>+nLxH2/b7KYij1tudVhQq0QXVfTSp5yqTN7CO/WcmlE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

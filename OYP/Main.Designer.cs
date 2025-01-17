@@ -87,10 +87,6 @@
             this.lbl_Bar = new DevExpress.XtraEditors.LabelControl();
             this.progressBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.lbl_Status = new DevExpress.XtraEditors.LabelControl();
-            this.navigationPage4 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.progressBardownload = new DevExpress.XtraEditors.ProgressBarControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_web = new DevExpress.XtraEditors.LabelControl();
@@ -153,10 +149,6 @@
             this.groupControl13.SuspendLayout();
             this.navigationPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.progressBar.Properties)).BeginInit();
-            this.navigationPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBardownload.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -482,14 +474,12 @@
             this.navigationFrame1.Controls.Add(this.navigationPage1);
             this.navigationFrame1.Controls.Add(this.navigationPage2);
             this.navigationFrame1.Controls.Add(this.navigationPage3);
-            this.navigationFrame1.Controls.Add(this.navigationPage4);
-            this.navigationFrame1.Location = new System.Drawing.Point(12, 107);
+            this.navigationFrame1.Location = new System.Drawing.Point(10, 114);
             this.navigationFrame1.Name = "navigationFrame1";
             this.navigationFrame1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage1,
             this.navigationPage2,
-            this.navigationPage3,
-            this.navigationPage4});
+            this.navigationPage3});
             this.navigationFrame1.SelectedPage = this.navigationPage1;
             this.navigationFrame1.Size = new System.Drawing.Size(420, 465);
             this.navigationFrame1.TabIndex = 9;
@@ -682,38 +672,6 @@
             this.lbl_Status.TabIndex = 12;
             this.lbl_Status.Text = "....";
             // 
-            // navigationPage4
-            // 
-            this.navigationPage4.Controls.Add(this.progressBardownload);
-            this.navigationPage4.Controls.Add(this.gridControl1);
-            this.navigationPage4.Name = "navigationPage4";
-            this.navigationPage4.Size = new System.Drawing.Size(420, 465);
-            // 
-            // progressBardownload
-            // 
-            this.progressBardownload.Location = new System.Drawing.Point(3, 427);
-            this.progressBardownload.Name = "progressBardownload";
-            this.progressBardownload.Size = new System.Drawing.Size(415, 31);
-            this.progressBardownload.TabIndex = 13;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(2, 2);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(416, 417);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowIndicator = false;
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.Text = "notifyIcon1";
@@ -759,7 +717,7 @@
             this.barButtonItem2,
             this.barButtonItem3});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsExpandCollapseMenu.ShowQuickAccessToolbarItem = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -791,12 +749,8 @@
             // 
             // barBtnFTPFolder
             // 
-            this.barBtnFTPFolder.Caption = "Yedekler";
-            this.barBtnFTPFolder.Id = 3;
-            this.barBtnFTPFolder.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnFTPFolder.ImageOptions.SvgImage")));
+            this.barBtnFTPFolder.Id = 11;
             this.barBtnFTPFolder.Name = "barBtnFTPFolder";
-            this.barBtnFTPFolder.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            this.barBtnFTPFolder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnFTPFolder_ItemClick);
             // 
             // barBtnSettingSave
             // 
@@ -954,10 +908,6 @@
             this.navigationPage3.ResumeLayout(false);
             this.navigationPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.progressBar.Properties)).EndInit();
-            this.navigationPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.progressBardownload.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -1019,10 +969,6 @@
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.LabelControl lbl_web;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage4;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.ProgressBarControl progressBardownload;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.BarButtonItem barBtnSetting;
         private DevExpress.XtraBars.BarButtonItem barBtnFTPSetting;

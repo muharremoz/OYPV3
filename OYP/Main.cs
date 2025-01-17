@@ -1,51 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using DevExpress.XtraEditors;
-using System.IO;
-using System.IO.Compression;
-using System.IO;
+﻿using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
-using System.Net;
-using DevExpress.Utils.Animation;
-using DevExpress.Utils.Native;
-using System.Timers;
-using System.Net.Mail;
-using Microsoft.Win32;
-using System.Net.Http;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.Devices;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraGrid.Columns;
-using System.Globalization;
-using System.Text.RegularExpressions;
-using DevExpress.LookAndFeel;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
+using Microsoft.Win32;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.IO.Compression;
+using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 namespace OYP
 {
     public partial class Main : XtraForm
     {
         private DriveService _service;
+        private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+
         public Main()
         {
             this.Icon = Properties.Resources.logo; // logo.ico dosyasının Resources'a eklenmiş olduğunu varsayıyoruz
 
             InitializeComponent();
+
             this.Text = "OYP - V:" + currentVersion;
-            LogManager.WriteLog("Program başlatıldı.");
-            CheckForUpdates();
-            // NotifyIcon için bir sağ tıklama menüsü oluşturun
             ContextMenuStrip contextMenu = new ContextMenuStrip();
             ToolStripMenuItem showItem = new ToolStripMenuItem("Göster", null, ShowForm);
             ToolStripMenuItem exitItem = new ToolStripMenuItem("Çıkış", null, ExitApplication);
@@ -57,16 +42,67 @@ namespace OYP
             notifyIcon1.Text = "Otomatik Yedekleme Programı";
             notifyIcon1.Visible = true;
 
+            // Timer ayarları
+            timer.Interval = 900000; // 15 dakika (milisaniye cinsinden)
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
         }
         private static System.Timers.Timer updateTimer;
         private bool isAutomaticBackup = false;
         private string connectionString = "Server=oypwan.bilkar.net;Database=OYP;User Id=sa;Password=P67S96L332008%;";
-        private const string versionUrl = "http://bilkar.net/oypversion.txt";
-        private const string updateUrl = "http://bilkar.net/OYP.exe";
         private const string currentVersion = "1.0.3"; // Şu anki sürümünüz
-        
-       private void AuthenticateToGoogleDrive()
+
+        private void Timer_Tick(object sender, EventArgs e)
         {
+            UpdateCompanyStatus();
+        }
+
+        private void UpdateCompanyStatus()
+        {
+            string companyName = txt_Company.Text.Trim();
+
+            if (string.IsNullOrEmpty(companyName))
+            {
+                MessageBox.Show("Firma adı boş olamaz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE customers SET last_online = @online WHERE company_name = @company_name";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Tarih ve saat bilgisini alıp parametreye ekliyoruz
+                    command.Parameters.AddWithValue("@online", DateTime.Now);
+                    command.Parameters.AddWithValue("@company_name", companyName);
+
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            //XtraMessageBox.Show($"Firma durumu başarıyla güncellendi: {companyName}", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            //XtraMessageBox.Show("Firma bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void AuthenticateToGoogleDrive()
+        {
+            LogManager.WriteLog("Google Drive bağlantısı başladı.");
             try
             {
                 UserCredential credential;
@@ -90,17 +126,21 @@ namespace OYP
                     HttpClientInitializer = credential,
                     ApplicationName = "Google Drive Uploader",
                 });
+                LogManager.WriteLog("Google Drive bağlantısı başarılı.");
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred while authenticating to Google Drive: {ex.Message}");
+                LogManager.WriteLog("Google Drive bağlantı hatası:" + ex.Message);
                 throw; // Hatanın üst seviyeye iletilmesini istiyorsanız bu satırı bırakabilirsiniz.
             }
+            LogManager.WriteLog("Google Drive bağlantısı bitti.");
 
         }
 
         private async Task UploadFileToGoogleDrive(string filePath)
         {
+            LogManager.WriteLog("Google Drive yükleme başladı");
             // Google Drive klasör ID'sini Settings dosyasından alıyoruz
             string folderId = txtDriveFolderID.Text;
 
@@ -122,13 +162,11 @@ namespace OYP
                     {
                         throw new Exception($"Google Drive yükleme hatası: {response.Exception}");
                     }
-
-                    Console.WriteLine($"Dosya yüklendi: {fileMetadata.Name}, ID: {request.ResponseBody.Id}");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Google Drive yükleme hatası: {ex.Message}");
+                LogManager.WriteLog("Google Drive yükleme hatası:" + ex.Message);
                 throw;
             }
         }
@@ -147,6 +185,9 @@ namespace OYP
 
         public async void BackupDatabases(DateTime? backupTime = null, string backupSuffix = "", string backupFlag = "", bool isAutomatic = false, bool sendEmail = true)
         {
+            if (_service == null)
+                AuthenticateToGoogleDrive();
+
             LogManager.WriteLog("Yedekleme işlemi başlatıldı.");
             try
             {
@@ -156,7 +197,8 @@ namespace OYP
                 int totalSteps = cmb_Database.Properties.Items.Count + cmb_Parametre.Properties.Items.Count;
                 int currentStep = 0;
 
-                UpdateUI(() => {
+                UpdateUI(() =>
+                {
                     progressBar.Properties.Maximum = totalSteps;
                     progressBar.EditValue = 0;
                 });
@@ -199,10 +241,12 @@ namespace OYP
                         }).ConfigureAwait(false);
 
                         currentStep++;
-                        UpdateUI(() => {
+                        UpdateUI(() =>
+                        {
                             progressBar.EditValue = currentStep;
                             lbl_Bar.Text = $"{(double)currentStep / totalSteps * 100:0.00}%";
                         });
+                        LogManager.WriteLog("Yedek alınan veritabanı: " + databaseName);
                     }
                 }
 
@@ -238,41 +282,58 @@ namespace OYP
                         }
 
                         currentStep++;
-                        UpdateUI(() => {
+                        UpdateUI(() =>
+                        {
                             progressBar.EditValue = currentStep;
                             lbl_Bar.Text = $"{(double)currentStep / totalSteps * 100:0.00}%";
                         });
+                        LogManager.WriteLog("Parametre Yedeklendi.");
                     }
                 }
 
                 // Yedek dosyalarını zip'e ekleme işlemi
                 string zipFileName = $"{txt_BackupFolder.Text}\\{companyName}_{timestamp}_{backupSuffix}.zip";
 
-                await Task.Run(() =>
-                {
-                    using (ZipArchive zip = ZipFile.Open(zipFileName, ZipArchiveMode.Create))
-                    {
-                        foreach (string file in Directory.GetFiles(txt_BackupFolder.Text, "*.bak"))
-                        {
-                            zip.CreateEntryFromFile(file, Path.GetFileName(file));
-                        }
+                LogManager.WriteLog($"ZIP dosyası oluşturma işlemi başlatıldı: {zipFileName}");
 
-                        foreach (string file in Directory.GetFiles(txt_BackupFolder.Text, $"Parametre_*_{backupSuffix}_{timestamp}.txt"))
+                try
+                {
+                    await Task.Run(() =>
+                    {
+                        using (ZipArchive zip = ZipFile.Open(zipFileName, ZipArchiveMode.Create))
                         {
-                            zip.CreateEntryFromFile(file, Path.GetFileName(file));
+                            foreach (string file in Directory.GetFiles(txt_BackupFolder.Text, "*.bak"))
+                            {
+                                zip.CreateEntryFromFile(file, Path.GetFileName(file));
+                                LogManager.WriteLog($"Dosya ZIP'e eklendi: {file}");
+                            }
+
+                            foreach (string file in Directory.GetFiles(txt_BackupFolder.Text, $"Parametre_*_{backupSuffix}_{timestamp}.txt"))
+                            {
+                                zip.CreateEntryFromFile(file, Path.GetFileName(file));
+                                LogManager.WriteLog($"Dosya ZIP'e eklendi: {file}");
+                            }
                         }
-                    }
-                }).ConfigureAwait(false);
+                    }).ConfigureAwait(false);
+
+                    LogManager.WriteLog($"ZIP dosyası başarıyla oluşturuldu: {zipFileName}");
+                }
+                catch (Exception ex)
+                {
+                    LogManager.WriteLog($"Hata oluştu: {ex.Message}");
+                }
 
                 // Geçici dosyaları silme işlemi
                 foreach (string file in Directory.GetFiles(txt_BackupFolder.Text, "*.bak"))
                 {
                     File.Delete(file);
+                    LogManager.WriteLog("Geçici dosya silindi." + file);
                 }
 
                 foreach (string file in Directory.GetFiles(txt_BackupFolder.Text, $"Parametre_*_{backupSuffix}_{timestamp}.txt"))
                 {
                     File.Delete(file);
+                    LogManager.WriteLog("Geçici parametre silindi." + file);
                 }
 
                 UpdateUI(() => lbl_Status.Text = "Yedek sunucuya gönderiliyor...");
@@ -280,10 +341,12 @@ namespace OYP
                 // Google Drive'a yükleme işlemi
                 await UploadFileToGoogleDrive(zipFileName).ConfigureAwait(false);
 
-                UpdateUI(() => {
+                UpdateUI(() =>
+                {
                     lbl_Status.Text = "Yedekleme işlemi tamamlandı.";
                     lbl_LastBackup.Text = DateTime.Now.ToString("dd.MM.yyyy / HH:mm");
                 });
+                LogManager.WriteLog("Yedekleme Tamamlandı." + "Dosya Adı: " + zipFileName);
 
                 Properties.Settings.Default.LastBackupTime = DateTime.Now;
                 Properties.Settings.Default.Save();
@@ -315,7 +378,7 @@ namespace OYP
                 {
                     XtraMessageBox.Show("Yedekleme işlemi başarıyla tamamlandı.", "Yedekleme Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
+                
                 LogManager.WriteLog("Yedekleme işlemi tamamlandı.");
 
                 // E-posta gönderimini sendEmail parametresine göre kontrol ediyoruz.
@@ -329,10 +392,12 @@ namespace OYP
                 XtraMessageBox.Show($"Hata: {ex.Message}", "Yedekleme Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LogManager.WriteLog($"Yedekleme hatası: {ex.Message}");
             }
+
         }
 
         public void UpdateBackupStatus()
         {
+            LogManager.WriteLog("Son backup tarihi yazılıyor.");
             try
             {
                 // Bugünün tarihini al
@@ -359,81 +424,18 @@ namespace OYP
 
                     }
                 }
+                LogManager.WriteLog("son backup tarihi yazıldı. " + today);
             }
             catch (Exception ex)
             {
                 // Hata durumunda konsola yaz
-                LogManager.WriteLog("Backup_1 ve Backup_2 kayıtları sıfırlanırken hata oldu: "+ex.Message);
-            }
-        }
-
-        private async void CheckForUpdates()
-        {
-            try
-            {
-                using (HttpClient client = new HttpClient())
-                {
-                    // Sunucudan version.txt'yi al
-                    HttpResponseMessage response = await client.GetAsync(versionUrl);
-
-                    // Eğer dosya mevcut değilse, işlemi sonlandır
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        // Dosya yoksa hiçbir şey yapma
-                        return;
-                    }
-
-                    // Dosya mevcutsa, içeriği al
-                    string latestVersion = await response.Content.ReadAsStringAsync();
-
-                    // Yeni sürüm var mı kontrol et
-                    if (latestVersion.Trim() != currentVersion)
-                    {
-                        StartUpdate();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                LogManager.WriteLog("Güncelleme kontrolü sırasında bir hata oluştu:" + ex.Message);
-                XtraMessageBox.Show("Güncelleme kontrolü sırasında bir hata oluştu: " + ex.Message, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void StartUpdate()
-
-        {
-            try
-            {
-                // Yeni sürümü indir
-                using (HttpClient client = new HttpClient())
-                {
-                    byte[] updatedProgram = client.GetByteArrayAsync(updateUrl).Result;
-
-                    string tempFilePath = Path.Combine(Path.GetTempPath(), "OYP.exe");
-
-                    // Yeni sürümü geçici dosyaya yaz
-                    File.WriteAllBytes(tempFilePath, updatedProgram);
-
-                    // Yeni sürümü çalıştır ve eskiyi kapat
-                    // Uygulamayı yeniden başlat
-                    System.Diagnostics.Process.Start(tempFilePath);
-                    Application.Exit();
-
-                }
-            }
-            catch (Exception ex)
-            {
-                LogManager.WriteLog("Güncelleme sırasında bir hata oluştu:" + ex.Message);
-                XtraMessageBox.Show("Güncelleme sırasında bir hata oluştu: " + ex.Message);
+                LogManager.WriteLog("Backup_1 ve Backup_2 kayıtları sıfırlanırken hata oldu: " + ex.Message);
             }
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            txtDriveFolderID.Text= Properties.Settings.Default.DriveFolderID;
-            AuthenticateToGoogleDrive();
-            //this.LookAndFeel.SetSkinStyle(SkinSvgPalette.WXI.Darkness);
+            txtDriveFolderID.Text = Properties.Settings.Default.DriveFolderID;
             string savedCompanyName = Properties.Settings.Default.CompanyName;
             txt_Company.Text = !string.IsNullOrEmpty(savedCompanyName) ? savedCompanyName : "";
             bool ftpConnected = GetFtpCredentialsAndSave();
@@ -452,9 +454,9 @@ namespace OYP
                 LoadSQLData();
                 SetAutoStart(true);
                 StartActiveStatusUpdater();
-                Task.Run(async () => await CheckLicenseExpiry()); // Lisans süresini kontrol etme
-                UpdateBackupStatus();
+                Task.Run(async () => await CheckLicenseExpiry());
                 UpdateActiveStatus();
+                UpdateBackupStatus();
 
             }
 
@@ -493,11 +495,12 @@ namespace OYP
             txt_BackupFolder.Text = Properties.Settings.Default.BackupFolder;
 
             //lbl_LastBackup.Text = Properties.Settings.Default.LastBackupTime.ToString("dd-MM-yyyy HH:mm:ss");
-           
+
         }
 
         private bool GetFtpCredentialsAndSave()
         {
+            LogManager.WriteLog(txt_Company.Text + " Firmasının bilgileri alınıyor.");
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -529,7 +532,7 @@ namespace OYP
                         {
                             lbl_FTPStatus.Text = "Firma aktif değil.";
                             lbl_FTPStatus.ForeColor = Color.IndianRed;
-                            //XtraMessageBox.Show("Firma aktif değil. İşlem gerçekleştirilemedi.", "Firma Durumu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            LogManager.WriteLog("Firma aktif değil.");
                             return false; // Firma aktif değil
                         }
 
@@ -542,7 +545,8 @@ namespace OYP
                                 lbl_license_expiry.Text = "Lisans süresi dolmuş.";
                                 lbl_FTPStatus.ForeColor = Color.IndianRed;
                                 lbl_license_expiry.ForeColor = Color.IndianRed;
-                                XtraMessageBox.Show("Lisans süresi dolmuş. İşlem gerçekleştirilemedi.", "Lisans Süresi Doldu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                LogManager.WriteLog("Lisans süresi dolmuş");
+                                XtraMessageBox.Show("Lisans süresi dolmuş.", "Lisans Süresi Doldu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return false; // Lisans süresi dolmuş
                             }
                         }
@@ -550,7 +554,8 @@ namespace OYP
                         {
                             lbl_FTPStatus.Text = "Lisans bilgisi geçersiz.";
                             lbl_FTPStatus.ForeColor = Color.IndianRed;
-                            XtraMessageBox.Show("Geçersiz lisans bilgisi. İşlem gerçekleştirilemedi.", "Lisans Hatası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            LogManager.WriteLog("Geçersiz lisans bilgisi.");
+                            XtraMessageBox.Show("Geçersiz lisans bilgisi.", "Lisans Hatası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return false; // Lisans bilgisi geçersiz
                         }
 
@@ -575,6 +580,7 @@ namespace OYP
 
                         txt_Company.Enabled = false;
 
+                        LogManager.WriteLog(txt_Company.Text + " Firmasının bilgileri alındı.");
                         return true; // İşlem başarılı
                     }
                     else
@@ -657,319 +663,6 @@ namespace OYP
             public string Backup1 { get; set; }
             public string Backup2 { get; set; }
             public DateTime CreationDate { get; set; }
-        }
-
-        private async Task ListFilesFromFTP()
-        {
-            string ftpServerAddress = "ftp://oypwan.bilkar.net"; // FTP sunucu adresi
-            string ftpUsername = Properties.Settings.Default.FtpUsername;
-            string ftpPassword = Properties.Settings.Default.FtpPassword;
-
-            List<BackupFileInfo> filesList = new List<BackupFileInfo>();
-
-            try
-            {
-                FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(ftpServerAddress);
-                ftpRequest.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
-                ftpRequest.Credentials = new NetworkCredential(ftpUsername, ftpPassword);
-
-                using (FtpWebResponse response = (FtpWebResponse)await ftpRequest.GetResponseAsync())
-                using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        if (line.EndsWith(".zip"))
-                        {
-                            string[] parts = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                            string fileName = parts[parts.Length - 1];
-
-                            // Dosya adındaki tarihi düzenli ifadeyle çekme
-                            string dateString = string.Empty;
-                            string pattern = @"_(\d{4}-\d{2}-\d{2})";
-                            Match match = Regex.Match(fileName, pattern);
-                            if (match.Success)
-                            {
-                                dateString = match.Groups[1].Value;
-                            }
-
-                            DateTime fileDate;
-                            if (!DateTime.TryParseExact(dateString, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fileDate))
-                            {
-                                fileDate = default; // Çözümleme başarısızsa varsayılan değer
-                            }
-
-                            string backup1 = fileName.Contains("Backup_1") ? fileName : string.Empty;
-                            string backup2 = fileName.Contains("Backup_2") ? fileName : string.Empty;
-
-                            var existingFile = filesList.FirstOrDefault(f => f.CreationDate == fileDate);
-                            if (existingFile != null)
-                            {
-                                if (string.IsNullOrEmpty(existingFile.Backup1) && !string.IsNullOrEmpty(backup1))
-                                    existingFile.Backup1 = backup1;
-
-                                if (string.IsNullOrEmpty(existingFile.Backup2) && !string.IsNullOrEmpty(backup2))
-                                    existingFile.Backup2 = backup2;
-                            }
-                            else
-                            {
-                                filesList.Add(new BackupFileInfo
-                                {
-                                    Backup1 = backup1,
-                                    Backup2 = backup2,
-                                    CreationDate = fileDate
-                                });
-                            }
-                        }
-                    }
-                }
-
-                // Dosyaları tarihe göre sıralama
-                filesList = filesList.OrderByDescending(f => f.CreationDate).ToList();
-
-                // Grid'e bağlama
-                gridControl1.DataSource = filesList;
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show("FTP'ye bağlanırken hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // GridControl1'i yapılandırmak için
-        private void ConfigureGrid()
-        {
-            // Grid sütunlarını temizliyoruz
-            gridView1.Columns.Clear();
-
-            // Backup_1 sütunu
-            gridView1.Columns.AddVisible("Backup1", "Backup_1");
-
-            // Backup_2 sütunu
-            gridView1.Columns.AddVisible("Backup2", "Backup_2");
-
-            // CreationDate sütunu
-            gridView1.Columns.AddVisible("CreationDate", "Tarih");
-
-            // Gruplama ve sıralama
-            gridView1.OptionsView.ShowGroupedColumns = false;
-
-            // Burada sütunun mevcut olduğundan emin olun
-            if (gridView1.Columns["CreationDate"] != null)
-            {
-                gridView1.Columns["CreationDate"].Group();
-                gridView1.SortInfo.Add(gridView1.Columns["CreationDate"], DevExpress.Data.ColumnSortOrder.Descending);
-            }
-
-            // Grupları genişlet
-            gridView1.ExpandAllGroups();
-
-            // Backup_1 ve Backup_2 sütunları için düzenleme modunu kapatma
-            gridView1.Columns["Backup1"].OptionsColumn.AllowEdit = false;
-            gridView1.Columns["Backup2"].OptionsColumn.AllowEdit = false;
-            gridView1.Columns["CreationDate"].OptionsColumn.AllowEdit = false;
-        }
-
-        private void CreateContextMenu()
-        {
-            // ContextMenuStrip oluşturma
-            ContextMenuStrip contextMenu = new ContextMenuStrip();
-
-            // İndir butonunu ekleme
-            ToolStripMenuItem downloadItem = new ToolStripMenuItem("İndir");
-            downloadItem.Click += DownloadMenuItem_Click;
-
-            // İndir butonuna ikon ekleme
-            downloadItem.Image = Properties.Resources.download; // downloadIcon.ico veya downloadIcon.png gibi
-            downloadItem.ImageAlign = ContentAlignment.MiddleLeft;  // İkonu sol tarafa hizalayın
-
-            // Geri Yükle butonunu ekleme
-            ToolStripMenuItem restoreItem = new ToolStripMenuItem("Geri Yükle");
-            restoreItem.Click += RestoreMenuItem_Click;
-
-            // Geri Yükle butonuna ikon ekleme
-            restoreItem.Image = Properties.Resources.history; // restoreIcon.ico veya restoreIcon.png gibi
-            restoreItem.ImageAlign = ContentAlignment.MiddleLeft; // İkonu sol tarafa hizalayın
-
-            // Menüye öğeleri ekleme
-            contextMenu.Items.Add(downloadItem);
-            contextMenu.Items.Add(restoreItem);
-
-            // GridView'e sağ tık menüsünü ekleme
-            gridControl1.ContextMenuStrip = contextMenu;
-        }
-
-        // Sağ tık menüsünde İndir butonuna tıklanınca yapılacak işlemler
-        private async void DownloadMenuItem_Click(object sender, EventArgs e)
-        {
-            var focusedRow = gridView1.GetFocusedRow() as BackupFileInfo;
-            if (focusedRow != null)
-            {
-                // Hangi sütuna tıklandığını kontrol et
-                GridColumn focusedColumn = gridView1.FocusedColumn;
-
-                // Dosya adı ve yolunu belirleyin
-                string fileName = string.Empty;
-                string localPath = string.Empty;
-
-                // Eğer Backup_1 sütunu tıklanmışsa
-                if (focusedColumn.FieldName == "Backup1" && !string.IsNullOrEmpty(focusedRow.Backup1))
-                {
-                    fileName = focusedRow.Backup1;
-                    localPath = Path.Combine(Application.StartupPath, "yedekler", fileName);
-                }
-                // Eğer Backup_2 sütunu tıklanmışsa
-                else if (focusedColumn.FieldName == "Backup2" && !string.IsNullOrEmpty(focusedRow.Backup2))
-                {
-                    fileName = focusedRow.Backup2;
-                    localPath = Path.Combine(Application.StartupPath, "yedekler", fileName);
-                }
-                else
-                {
-                    XtraMessageBox.Show("Seçilen dosya bulunamadı veya geçerli değil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Klasör yoksa oluştur
-                string directoryPath = Path.GetDirectoryName(localPath);
-                if (!Directory.Exists(directoryPath))
-                {
-                    try
-                    {
-                        Directory.CreateDirectory(directoryPath); // Klasörü oluştur
-                    }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show($"Klasör oluşturulamadı: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                }
-
-                // Dosyayı indirmeye başla
-                await DownloadFile(fileName, localPath, progressBardownload); // ProgressBar parametresi eklendi
-            }
-        }
-
-        // Geri Yükle butonuna tıklanınca yapılacak işlemler
-        private void RestoreMenuItem_Click(object sender, EventArgs e)
-        {
-            var focusedRow = gridView1.GetFocusedRow() as BackupFileInfo;
-            if (focusedRow != null)
-            {
-                // Geri yükleme işlemi ile ilgili işlemler burada yapılabilir
-                XtraMessageBox.Show("Geri yükleme işlemi başlatıldı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        // Dosya indirme işlemi
-        private async Task DownloadFile(string fileName, string localPath, ProgressBarControl progressBar)
-        {
-            string ftpServerAddress = "ftp://oypwan.bilkar.net";
-            string ftpUsername = Properties.Settings.Default.FtpUsername;
-            string ftpPassword = Properties.Settings.Default.FtpPassword;
-
-            FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(ftpServerAddress + "/" + fileName);
-            ftpRequest.Method = WebRequestMethods.Ftp.DownloadFile;
-            ftpRequest.Credentials = new NetworkCredential(ftpUsername, ftpPassword);
-            ftpRequest.UsePassive = true;
-            ftpRequest.EnableSsl = true;
-
-            try
-            {
-                // Dosya boyutunu öğrenmek için FtpWebRequest gönderiyoruz
-                ftpRequest = (FtpWebRequest)WebRequest.Create(ftpServerAddress + "/" + fileName);
-                ftpRequest.Method = WebRequestMethods.Ftp.GetFileSize;
-                ftpRequest.Credentials = new NetworkCredential(ftpUsername, ftpPassword);
-                ftpRequest.UsePassive = true;
-
-
-                long totalFileSize;
-                using (FtpWebResponse sizeResponse = (FtpWebResponse)await ftpRequest.GetResponseAsync())
-                {
-                    totalFileSize = sizeResponse.ContentLength;
-                }
-
-                // İndirme isteği
-                ftpRequest = (FtpWebRequest)WebRequest.Create(ftpServerAddress + "/" + fileName);
-                ftpRequest.Method = WebRequestMethods.Ftp.DownloadFile;
-                ftpRequest.Credentials = new NetworkCredential(ftpUsername, ftpPassword);
-                ftpRequest.UsePassive = true;
-
-
-                using (FtpWebResponse response = (FtpWebResponse)await ftpRequest.GetResponseAsync())
-                using (Stream responseStream = response.GetResponseStream())
-                using (FileStream fileStream = new FileStream(localPath, FileMode.Create))
-                {
-                    byte[] buffer = new byte[4096];
-                    int bytesRead;
-                    long totalBytesRead = 0;
-
-                    // ProgressBar başlangıç ayarları
-                    progressBar.Invoke(new Action(() =>
-                    {
-                        progressBar.Properties.Minimum = 0;
-                        progressBar.Properties.Maximum = 100;
-                        progressBar.Position = 0;
-                        progressBar.Visible = true; // İndirme başlarken görünür yap
-                    }));
-
-                    while ((bytesRead = await responseStream.ReadAsync(buffer, 0, buffer.Length)) > 0)
-                    {
-                        await fileStream.WriteAsync(buffer, 0, bytesRead);
-                        totalBytesRead += bytesRead;
-
-                        // ProgressBar'ı güncelle
-                        int progressPercentage = (int)((totalBytesRead * 100) / totalFileSize);
-                        progressBar.Invoke(new Action(() => progressBar.Position = progressPercentage));
-                    }
-                }
-
-                // İndirme başarılı, ProgressBar'ı sıfırla
-                progressBar.Invoke(new Action(() =>
-                {
-                    progressBar.Position = 0;
-                    progressBar.Visible = false; // İndirme bittikten sonra gizle
-                }));
-
-                // Klasörü açmak için sor
-                DialogResult result = XtraMessageBox.Show(
-                    "Dosya başarıyla indirildi. İndirilen klasörü açmak ister misiniz?",
-                    "İndir",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question
-                );
-
-                if (result == DialogResult.Yes)
-                {
-                    // Dosyanın bulunduğu klasörü aç
-                    string folderPath = Path.GetDirectoryName(localPath);
-                    if (!string.IsNullOrEmpty(folderPath) && Directory.Exists(folderPath))
-                    {
-                        System.Diagnostics.Process.Start("explorer.exe", folderPath);
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show("Klasör açılamadı. Yol geçersiz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Hata durumunda ProgressBar'ı sıfırla
-                progressBar.Invoke(new Action(() =>
-                {
-                    progressBar.Position = 0;
-                    progressBar.Visible = false;
-                }));
-
-                XtraMessageBox.Show($"Dosya indirilemedi: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private async Task LoadGrid()
-        {
-            await ListFilesFromFTP();
-            ConfigureGrid();
         }
 
         private void LoadSQLData()
@@ -1136,7 +829,7 @@ namespace OYP
             updateTimer.AutoReset = true; // Sürekli tekrar eder
             updateTimer.Start();
         }
-       
+
         private void UpdateActiveStatus()
         {
             string connectionString = "Server=oypwan.bilkar.net;Database=OYP;User Id=sa;Password=P67S96L332008%;";
@@ -1170,7 +863,7 @@ namespace OYP
                 LogManager.WriteLog("UpdateActiveStatus | Hata: " + ex.Message);
             }
         }
-       
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -1179,7 +872,7 @@ namespace OYP
             notifyIcon1.BalloonTipText = "Belirtilen saatlerde yedek alınacaktır. Lütfen Programı Kapatmayın.";
             notifyIcon1.ShowBalloonTip(1000);
         }
-        
+
         private void ShowForm(object sender, EventArgs e)
         {
             this.Show();
@@ -1220,7 +913,7 @@ namespace OYP
             this.Hide();
             notifyIcon1.ShowBalloonTip(500, "Yedekleme Programı", "Uygulama sistem tepsisinde çalışmaya devam ediyor.", ToolTipIcon.Info);
         }
-       
+
         private void ConnectToDatabase()
         {
             string server = txt_SqlServer.Text;
@@ -1257,7 +950,7 @@ namespace OYP
             }
 
         }
-       
+
         public void LoadDatabases()
         {
             // Properties.Settings üzerinden bağlantı bilgilerini alıyoruz
@@ -1282,12 +975,12 @@ namespace OYP
                 LogManager.WriteLog("LoadDatabases Hatası: " + ex.Message);
             }
         }
-       
+
         public void LoadParameters()
         {
             cmb_Parametre.Properties.Items.AddRange(new string[] { "Perakende", "Toptan", "Üretim", "Stokcari" });
         }
-       
+
         private void UpdateUI(Action action)
         {
             if (InvokeRequired)
@@ -1299,7 +992,7 @@ namespace OYP
                 action();
             }
         }
-        
+
         public void StartBackupScheduler()
         {
             System.Timers.Timer backupTimer = new System.Timers.Timer(1000); // 1 saniyede bir kontrol
@@ -1488,8 +1181,13 @@ namespace OYP
 
             if (e.KeyCode == Keys.G)
             {
-               txtDriveFolderID.Enabled= true;
-               txt_Company.Enabled= true;
+                txtDriveFolderID.Enabled = true;
+                txt_Company.Enabled = true;
+            }
+
+            if (e.KeyCode == Keys.O)
+            {
+                UpdateCompanyStatus();
             }
 
         }
@@ -1549,13 +1247,6 @@ namespace OYP
             navigationFrame1.SelectedPage = navigationPage2;
         }
 
-        private void barBtnFTPFolder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            navigationFrame1.SelectedPage = navigationPage4;
-            LoadGrid();
-            CreateContextMenu();
-        }
-
         private void barBtnSetting_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             navigationFrame1.SelectedPage = navigationPage1;
@@ -1606,7 +1297,7 @@ namespace OYP
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AuthenticateToGoogleDrive(); // Servis başlatma burada yapılır
+            AuthenticateToGoogleDrive();
 
         }
     }
