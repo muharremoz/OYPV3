@@ -8,6 +8,7 @@ using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.IO.Compression;
@@ -23,6 +24,10 @@ namespace OYP
     {
         private DriveService _service;
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        string currentVersion = "2.9.9"; // Şu anki program sürümü
+        private static System.Timers.Timer updateTimer;
+        private bool isAutomaticBackup = false;
+        private string connectionString = "Server=oypwan.bilkar.net;Database=OYP;User Id=sa;Password=P67S96L332008%;";
 
         public Main()
         {
@@ -43,15 +48,11 @@ namespace OYP
             notifyIcon1.Visible = true;
 
             // Timer ayarları
-            timer.Interval = 900000; // 15 dakika (milisaniye cinsinden)
+            timer.Interval = 3600000; // 1 saat (milisaniye cinsinden)
             timer.Tick += Timer_Tick;
             timer.Start();
 
         }
-        private static System.Timers.Timer updateTimer;
-        private bool isAutomaticBackup = false;
-        private string connectionString = "Server=oypwan.bilkar.net;Database=OYP;User Id=sa;Password=P67S96L332008%;";
-        private const string currentVersion = "1.0.3"; // Şu anki sürümünüz
 
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -65,6 +66,14 @@ namespace OYP
             if (string.IsNullOrEmpty(companyName))
             {
                 MessageBox.Show("Firma adı boş olamaz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Geçerli saati kontrol ediyoruz
+            int currentHour = DateTime.Now.Hour;
+            if (currentHour < 8 || currentHour >= 22)
+            {
+                //MessageBox.Show("Bu işlem yalnızca 08:00 ile 22:00 arasında yapılabilir.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -85,11 +94,11 @@ namespace OYP
 
                         if (rowsAffected > 0)
                         {
-                            //XtraMessageBox.Show($"Firma durumu başarıyla güncellendi: {companyName}", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // XtraMessageBox.Show($"Firma durumu başarıyla güncellendi: {companyName}", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            //XtraMessageBox.Show("Firma bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            // XtraMessageBox.Show("Firma bulunamadı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     catch (Exception ex)
@@ -378,7 +387,7 @@ namespace OYP
                 {
                     XtraMessageBox.Show("Yedekleme işlemi başarıyla tamamlandı.", "Yedekleme Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                
+
                 LogManager.WriteLog("Yedekleme işlemi tamamlandı.");
 
                 // E-posta gönderimini sendEmail parametresine göre kontrol ediyoruz.
@@ -435,6 +444,7 @@ namespace OYP
 
         private void Main_Load(object sender, EventArgs e)
         {
+
             txtDriveFolderID.Text = Properties.Settings.Default.DriveFolderID;
             string savedCompanyName = Properties.Settings.Default.CompanyName;
             txt_Company.Text = !string.IsNullOrEmpty(savedCompanyName) ? savedCompanyName : "";
@@ -445,11 +455,9 @@ namespace OYP
             {
                 // Eğer FTP bağlantısı yapılmamışsa veya firma adı boşsa ikinci sayfayı aç
                 navigationFrame1.SelectedPage = navigationPage2;
-                //XtraMessageBox.Show("Firma bilgilerinde hata var . Lütfen Bilgileri düzeltin.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-
                 StartBackupScheduler();
                 LoadSQLData();
                 SetAutoStart(true);
@@ -457,9 +465,7 @@ namespace OYP
                 Task.Run(async () => await CheckLicenseExpiry());
                 UpdateActiveStatus();
                 UpdateBackupStatus();
-
             }
-
 
             timer1.Interval = 24 * 60 * 60 * 1000; // 24 saat (milisaniye cinsinden)
             timer1.Enabled = true;
@@ -1101,7 +1107,6 @@ namespace OYP
             LogManager.WriteLog("Program kapatıldı.");
 
         }
-
         private void lbl_license_Click(object sender, EventArgs e)
         {
             // lbl_license'ın değerini kopyala
@@ -1110,7 +1115,6 @@ namespace OYP
             // Kullanıcıya uyarı mesajı göster
             XtraMessageBox.Show("Lisans anahtarı kopyalandı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             ExitApplication(sender, e);

@@ -4,7 +4,7 @@
   <description asmv2:iconFile="logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="OYP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="OYP" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="OYP.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -308,13 +308,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OYP.exe" size="288200">
-      <assemblyIdentity name="OYP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="OYP" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+nLxH2/b7KYij1tudVhQq0QXVfTSp5yqTN7CO/WcmlE=</dsig:DigestValue>
+        <dsig:DigestValue>W+lz20pusXriaFdj9snPaArSRvNxvuuG74GyPw2cGDA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
